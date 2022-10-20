@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero doc:</strong>
+  <%= @despesa.numero_doc %>
+</p>
+
+<p>
+  <strong>Fornecedor:</strong>
+  <%= @despesa.fornecedor %>
+</p>
+
+<%= link_to 'Edit', edit_despesa_path(@despesa) %> |
+<%= link_to 'Back', despesas_path %>

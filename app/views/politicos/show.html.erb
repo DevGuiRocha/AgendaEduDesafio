@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @politico.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @politico.cpf %>
+</p>
+
+<p>
+  <strong>Sguf:</strong>
+  <%= @politico.sguf %>
+</p>
+
+<p>
+  <strong>Sgpartido:</strong>
+  <%= @politico.sgpartido %>
+</p>
+
+<p>
+  <strong>Id cadastro:</strong>
+  <%= @politico.id_cadastro %>
+</p>
+
+<%= link_to 'Edit', edit_politico_path(@politico) %> |
+<%= link_to 'Back', politicos_path %>

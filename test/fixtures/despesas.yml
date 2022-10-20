@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_doc: MyString
+  fornecedor: MyString
+
+two:
+  numero_doc: MyString
+  fornecedor: MyString
