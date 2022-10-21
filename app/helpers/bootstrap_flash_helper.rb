@@ -1,11 +1,11 @@
 
 module BootstrapFlashHelper
     def bootstrap_flash
-        capture do
+       capture do
             flash.each do |type, messages|
                 bootstrap_alerts_for_type(bootstrap_flash_type(type), messages)
             end
-        end
+        end 
     end
 
     def bootstrap_alerts_for_type(type, messages)
@@ -16,6 +16,6 @@ module BootstrapFlashHelper
         end
     end
 
-    def bootstrap_flash_type(type)
+    def bootstrap_flash_type(type) 
         { notice: :sucess, alert: :warning, error: :danger }[type.to_sym]
     end

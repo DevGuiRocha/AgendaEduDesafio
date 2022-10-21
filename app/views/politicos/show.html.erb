@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <table>
+    <h1><%= foto_politico(@apresenta.politico) %>
+      <%= @apresenta.politico.nome %> (<%= @apresenta.politico.sgpartido %>)</h1>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @politico.nome %>
-</p>
+    <h2>Maior Despesa: <%= number_to_currency(@apresenta.gastos_ordenados.first.valor_liquido, :unit => "R$") %></h2>
+  </table>
 
-<p>
-  <strong>Cpf:</strong>
-  <%= @politico.cpf %>
-</p>
+  <br>
 
-<p>
-  <strong>Sguf:</strong>
-  <%= @politico.sguf %>
-</p>
-
-<p>
-  <strong>Sgpartido:</strong>
-  <%= @politico.sgpartido %>
-</p>
-
-<p>
-  <strong>Id cadastro:</strong>
-  <%= @politico.id_cadastro %>
-</p>
-
-<%= link_to 'Edit', edit_politico_path(@politico) %> |
-<%= link_to 'Back', politicos_path %>
+  <%== pagy_bootstrap_nav(@pagy) %>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Fornecedor: </th>
+        <th scope="col">Data: </th>
+        <th scope="col">Valor: </th>
+        <th scope="col">URL: </th>
+      </tr>
+    </thead>
+    <% @records.each do |despesa| %>
+      <tr>
+        <td><%= despesa.fornecedor %></td>
+        <td><%= despesa.data_emissao %></td>
+        <td style="text-align:right;"><%= number_to_currency(despesa.valor_liquido, :unit => "R$") %></td>
+        <td><%= link_to "Recibo", despesa.url_documento, target: :_blank %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

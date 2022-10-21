@@ -4,10 +4,14 @@ class PoliticosController < ApplicationController
   # GET /politicos or /politicos.json
   def index
     @politicos = Politico.all
+    @apresenta = ConsultaPoliticosApresenta.new
+    @pagy, @records = pagy(@apresenta.politicos, item: 5)
   end
 
   # GET /politicos/1 or /politicos/1.json
   def show
+    @apresenta = PoliticosApresenta.new(params[:id])
+    @pagy, @records = pagy(@apresenta.gastos_ordenados, item: 20)
   end
 
   # GET /politicos/new
