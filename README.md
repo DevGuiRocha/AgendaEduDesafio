@@ -1,4 +1,12 @@
-# Ranking dos gastos dos Deputados
+
+# Instruções
+
+Execute o comando ``bundle install`` para instalar as gems caso seja necessária
+
+Em seguda, use o comando ``rails s`` para inicializar o servidor e acesse pelo endereço http://localhost:3000/
+
+
+## Ranking dos gastos dos Deputados
 
 Estamos muito felizes que você tenha chegado nessa etapa do nosso processo seletivo, para essa fase, desejamos que você resolva um desafio. Nosso desafio consiste em analisar alguns dados disponibilizados pelo Câmara dos Deputados relativos aos gastos dos parlamentares. A ideia é descobrir quem, do seu estado, está gastando mais e exibir de forma resumida esses principais gastos.
 
