@@ -11,20 +11,20 @@
           <tr>
             <th>Foto </th>
             <th>Nome </th>
-            <th>CPF </th>
             <th>Partido </th>
+            <th>CPF</th>
             <th>Total </th>
           </tr>
 
           <% @records.each do |politicos|%>
 
-            <tr>
-              <td><%= link_to foto_politico(politicos), politico_path(politicos) %></td>
-              <td><%= link_to "#{politicos.nome}", politico_path(politicos) %></td>
-              <td><%= politicos.cpf %></td>
-              <td><%= politicos.sgpartido %></td>
-              <td><%= number_to_currency(@apresenta.gastos[politicos.id], :unit => "R$") %></td>
-            </tr>
+          <tr>
+            <td><%= link_to foto_politico(politicos)%></td>
+            <td><%= link_to "#{politicos.nome}", politico_path(politicos) %></td>
+            <td><%= politicos.sgpartido %></td>
+            <td><%= politicos.cpf %></td>
+            <td><%= number_to_currency(@apresenta.gastos[politicos.id], :unit => "R$ " ) %></td>
+          </tr>
 
           <% end %>
       <% end %>

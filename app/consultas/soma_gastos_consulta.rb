@@ -6,7 +6,7 @@ class SomaGastosConsulta
 
     attr_reader :politicos
 
-    def call 
-        politicos.joins(:despesas).group('politicos.id').sum('despesas.valor_liquido')
+    def call
+        politicos.joins(:despesas).where('politicos.id').sum('despesas.valor_liquido')
     end
 end
