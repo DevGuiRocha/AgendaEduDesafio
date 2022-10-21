@@ -1,7 +1,7 @@
 <div class="container">
   <table>
-    <h1><%= foto_politico(@apresenta.politico) %>
-      <%= @apresenta.politico.nome %> (<%= @apresenta.politico.sgpartido %>)</h1>
+    <h1><%= foto_politico(@apresenta.politicos) %>
+      <%= @apresenta.politicos.nome %> (<%= @apresenta.politicos.sgpartido %>)</h1>
 
     <h2>Maior Despesa: <%= number_to_currency(@apresenta.gastos_ordenados.first.valor_liquido, :unit => "R$") %></h2>
   </table>

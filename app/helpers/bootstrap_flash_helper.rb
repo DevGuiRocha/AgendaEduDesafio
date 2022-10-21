@@ -17,5 +17,5 @@ module BootstrapFlashHelper
     end
 
     def bootstrap_flash_type(type) 
-        { notice: :sucess, alert: :warning, error: :danger }[type.to_sym]
+        { notice: :success, alert: :warning, error: :danger }[type.to_sym]
     end
