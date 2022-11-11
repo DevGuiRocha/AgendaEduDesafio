@@ -1,8 +1,26 @@
 <div class="container">
   <div style="padding: 20px;">
-    <h2>Desafio Agenda Edu</h2>
+    <h2>Gastos Políticos</h2>
 
-    <h5> O que você deseja fazer hoje?</h5>
+    <p>Este é um pequeno projeto para praticar um pouco de Rails, além de algumas funcionalidades
+      e gems, que devem ser úteis a longo prazo.</p>
+    <p>Para começar, baixe um arquivo CSV disponível 
+      <a href="https://dadosabertos.camara.leg.br/swagger/api.html#staticfile">neste link</a></p>
+      
+  </div>
+
+  <div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Carregar CSV</h5>
+        <p class="card-text">Essa feature permite carregar um CSV com os dados dos políticos que serão salvos no banco de dados".</p>
+      </div>
+      <div class="card-footer">
+        <div style="text-align: right;">
+          <a class="btn btn-outline-primary btn-lg" href="/arquivo">Carregar CSV</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="card-group">
@@ -14,18 +32,6 @@
       <div class="card-footer">
         <div style="text-align: right;">
           <a class="btn btn-outline-primary btn-lg" href="/politicos">Listar Politicos</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Carregar CSV</h5>
-        <p class="card-text">Essa feature permite carregar um CSV com os dados dos políticos que serão salvos no banco de dados".</p>
-      </div>
-      <div class="card-footer">
-        <div style="text-align: right;">
-          <a class="btn btn-outline-primary btn-lg" href="/arquivo">Carregar CSV</a>
         </div>
       </div>
     </div>
